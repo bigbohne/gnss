@@ -1,0 +1,36 @@
+{
+  "name": "bun-react-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
+    "start": "NODE_ENV=production bun src/index.ts"
+  },
+  "dependencies": {
+    "@mantine/core": "^9.3.1",
+    "@mantine/hooks": "^9.3.1",
+    "@tanstack/react-query": "^5.101.0",
+    "axios": "^1.17.0",
+    "buffer": "^6.0.3",
+    "haversine-distance": "^1.2.4",
+    "jotai": "^2.20.1",
+    "lucide-react": "^1.18.0",
+    "luxon": "^3.7.2",
+    "ntrip-client": "^1.1.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "use-local-storage-state": "^19.5.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/luxon": "^3.7.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/web-bluetooth": "^0.0.21",
+    "postcss": "^8.5.15",
+    "postcss-preset-mantine": "^1.18.0",
+    "postcss-simple-vars": "^7.0.1"
+  }
+}
